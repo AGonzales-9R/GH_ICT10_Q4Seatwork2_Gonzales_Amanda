@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- PYSCRIPT CDN -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+	<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+
+    <!-- SETUP BOOTSTAP: LINK TO BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
+    <!-- CSS LINK -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- PYSCRIPT LINK -->
+    <py-script src="main.py"></py-script>
+
+    <title>ICT 10 Seatwork #2: My Classmates</title>
+</head>
+<body>
+    <h1 style="text-align: center; margin-top: 5%;">Grade 10 Classmate System</h1>
+    <div class="container shadow rounded p-4 mb-4 mt-5">
+        <form id="form">
+            <label>Classmate's name:</label>
+            <input type="text" id="inputClassmatee" class="form-control">
+            <br>
+            <label for="section">Section:</label>
+            <select name="section" id="inputSection" class="form-control">
+                <option value="Emerald">Emerald</option>
+                <option value="Ruby">Ruby</option>
+                <option value="Sapphire">Sapphire</option>
+                <option value="Topaz">Topaz</option>
+            </select>
+            <br>
+            <label for="subject">Favorite Subject:</label>
+            <select name="subject" id="inputSubject" class="form-control">
+                <option value="English">English</option>
+                <option value="Filipino">Filipino</option>
+                <option value="Math">Math</option>
+                <option value="Science">Science</option>            
+                <option value="Social Studies">Social Studies</option>
+            </select>
+            <br>
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <input type="button" class="btn btn-outline-dark" py-click="addMate" value="Add Classmate">
+                <input type="button" class="btn btn-outline-dark" py-click="showList" value="Show List">
+            </div>
+        </form>
+        <br>
+        <hr>
+        <div id="output"></div>
+    </div>
+</body>
+</html>
